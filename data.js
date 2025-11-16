@@ -1,4 +1,3 @@
-<script src="script.js"></script>;
 const data = {
   products: [
     {
@@ -634,3 +633,11 @@ const data = {
 };
 
 const products = data.products;
+for (let i = 0; i < products.length; i++) {
+  if (
+    products[i].previousPrice !== null &&
+    products[i].previousPrice > products[i].price
+  ) {
+    console.log(products[i].name);
+  }
+}
